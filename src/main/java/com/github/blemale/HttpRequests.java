@@ -2,8 +2,6 @@ package com.github.blemale;
 
 import org.apache.http.client.fluent.Request;
 
-import javax.net.ssl.SSLContext;
-
 import java.time.Duration;
 
 import static java.time.temporal.ChronoUnit.MINUTES;
@@ -11,13 +9,8 @@ import static java.time.temporal.ChronoUnit.SECONDS;
 import static java.util.Objects.requireNonNull;
 
 /**
- * An utility class for {@link Request} :
- * <ul>
- *  <li>Create {@link Request} with enforced {@link Timeouts request timeouts}</li>
- *  <li>Execute {@link Request} with a lenient {@link SSLContext} which accept self-signed certificate</li>
- * </ul>
- *<br/>
- *
+ * A factory class for {@link Request} which enforced sensible {@link Timeouts request timeouts}.
+ * <br/>
  * Exemple:
  * <pre>
  * {@code
